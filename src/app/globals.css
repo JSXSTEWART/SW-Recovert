@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-in-from-right {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slide-out-to-right {
+  from { transform: translateX(0); }
+  to { transform: translateX(100%); }
+}
+
+@keyframes slide-in-from-left {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slide-out-to-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+.animate-in {
+  animation-duration: 300ms;
+  animation-fill-mode: both;
+}
+
+.animate-out {
+  animation-duration: 300ms;
+  animation-fill-mode: both;
+}
+
+.fade-in-0 { animation-name: fade-in; }
+.fade-out-0 { animation-name: fade-in; animation-direction: reverse; }
+.slide-in-from-right { animation-name: slide-in-from-right; }
+.slide-out-to-right { animation-name: slide-out-to-right; }
+.slide-in-from-left { animation-name: slide-in-from-left; }
+.slide-out-to-left { animation-name: slide-out-to-left; }
+
+[data-state="open"].data-\[state\=open\]\:animate-in { animation-name: fade-in; animation-duration: 300ms; }
+[data-state="closed"].data-\[state\=closed\]\:animate-out { animation-name: fade-in; animation-direction: reverse; animation-duration: 200ms; }
