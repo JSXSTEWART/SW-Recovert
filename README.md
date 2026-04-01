@@ -1,57 +1,70 @@
-# Apex Receivables Group Website
+# Pulseboard Site Handoff
 
-Production-ready marketing website starter for a debt recovery and accounts receivable management company, built with Next.js App Router, TypeScript, Tailwind CSS, and shadcn-inspired reusable UI primitives.
+This repository is ready for a **claim-friendly GitHub → Vercel Preview** handoff.
 
-## Tech Stack
+## 1) Push to GitHub under your account
 
-- Next.js (App Router)
-- TypeScript
-- Tailwind CSS
-- ESLint
-- Minimal shadcn/ui-style component setup
+```bash
+mkdir pulseboard-site
+tar -xzf pulseboard-site.tar.gz -C pulseboard-site --strip-components=1
+cd pulseboard-site
 
-## Project Structure
+git init
+git add -A
+git commit -m "Initial Pulseboard site"
+git branch -M main
+```
 
-- `app/` — routes and page-level metadata
-- `components/layout/` — shared site chrome (header/footer)
-- `components/sections/` — reusable page sections (hero, contact form)
-- `components/ui/` — reusable primitives (button, cards, fields, container)
-- `lib/` — utilities and site configuration
-- `config/` — typed environment/config scaffolding
+Create a new GitHub repo in the web UI (for example: `pulseboard-site`), then run:
 
-## Local Development
+```bash
+git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/pulseboard-site.git
+git push -u origin main
+```
 
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
-2. Copy environment file:
-   ```bash
-   cp .env.example .env.local
-   ```
-3. Start development server:
-   ```bash
-   npm run dev
-   ```
+## 2) Deploy Preview on Vercel
 
-## Scripts
+1. Log into Vercel as `joe@status26.com`.
+2. Go to **Add New → Project**.
+3. Import the `pulseboard-site` repository.
+4. Let framework auto-detect as **Next.js**.
+5. Click **Deploy**.
 
-- `npm run dev` — start local dev server
-- `npm run build` — production build
-- `npm run start` — serve production build
-- `npm run lint` — run ESLint
-- `npm run typecheck` — run TypeScript checks
+Vercel will generate a preview URL immediately after deployment.
 
-## Deploy on Vercel
+## 3) Optional env vars (forms)
 
-1. Push this repository to GitHub/GitLab/Bitbucket.
-2. Import project in Vercel.
-3. Add environment variable:
-   - `NEXT_PUBLIC_SITE_URL` set to your production URL.
-4. Deploy using defaults (`npm run build`).
+If you want waitlist/contact submissions forwarded to a real destination, configure:
 
-## Notes for Future Iteration
+- `INGEST_WEBHOOK_URL` = your endpoint (Zapier catch hook, Slack workflow webhook, custom API, etc.)
+- `INGEST_WEBHOOK_BEARER` = bearer token for that endpoint (optional)
+- `RATE_LIMIT_PER_MINUTE` = e.g. `30` (optional)
 
-- Replace placeholder content with final brand messaging.
-- Connect contact form to your API route, CRM, or form provider.
-- Add CMS/MDX for blog content under `/resources` and `/blog`.
+Without `INGEST_WEBHOOK_URL`, forms still accept and log server-side so preview review is not blocked.
+
+## Skill-required status (updated)
+
+1. **Live URL**
+   - Not created here (requires your Vercel deploy step above).
+2. **Repo link**
+   - Not created here (requires your GitHub push step above).
+3. **Short changelog**
+   - Built full Next.js App Router site + pages (Home, Pricing, Docs, Blog, Contact).
+   - Added MDX blog support + starter posts.
+   - Added `/api/waitlist` + `/api/contact` with validation + simple rate limiting.
+   - Added webhook ingestion adapter with safe fallback.
+4. **Editable project structure summary**
+   - `app/` — pages + API routes + MDX posts
+   - `components/` — UI building blocks + forms
+   - `lib/` — env + ingest + rate-limit utilities
+   - `styles/` — Tailwind globals
+   - `public/` — static files
+5. **Follow-up prompt suggestions**
+   - “Wire waitlist submissions to Zapier Tables and send a confirmation email via Resend.”
+   - “Make Pricing feel more enterprise and add a security/compliance section.”
+   - “Add a Docs sidebar and turn Docs into MDX pages.”
+   - “Deploy preview and share the Vercel URL; then refine copy section-by-section.”
+6. **Assumptions and next approvals**
+   - Assumed preview-first workflow, no production promotion, and no domain work.
+   - Assumed forms should be functional now, with integration added later.
+   - Domain/DNS and production promotion remain explicit opt-ins.
