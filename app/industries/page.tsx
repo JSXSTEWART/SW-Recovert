@@ -166,7 +166,7 @@ export default function IndustriesPage() {
         aria-labelledby="industries-hero-heading"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Badge variant="accent" className="mb-4">
+          <Badge variant="secondary" className="mb-4 bg-blue-500/20 text-blue-200 border-none">
             Industries We Serve
           </Badge>
           <h1
@@ -184,7 +184,7 @@ export default function IndustriesPage() {
       </section>
 
       {/* Industries Nav */}
-      <section className="bg-white border-b border-[#e2e8f0] py-6" aria-label="Jump to industry">
+      <section className="bg-white border-b border-[#e2e8f0] py-6 sticky top-0 z-10" aria-label="Jump to industry">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav aria-label="Industry sections" className="flex flex-wrap gap-2 justify-center">
             {industries.map((industry) => {
@@ -193,7 +193,7 @@ export default function IndustriesPage() {
                 <a
                   key={industry.id}
                   href={`#${industry.id}`}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#f4f6f9] hover:bg-[#1e3a5f] hover:text-white rounded-full text-sm font-medium text-[#374151] transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#f4f6f9] hover:bg-[#1e3a5f] hover:text-white rounded-full text-sm font-medium text-[#374151] transition-all"
                 >
                   <Icon className="h-4 w-4" aria-hidden="true" />
                   {industry.title}
@@ -206,13 +206,14 @@ export default function IndustriesPage() {
 
       {/* Industry Details */}
       <section className="bg-white py-16 lg:py-24" aria-label="Industry details">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
           {industries.map((industry) => {
             const Icon = industry.icon;
             return (
               <div
                 key={industry.id}
                 id={industry.id}
+                className="scroll-mt-24"
                 aria-labelledby={`industry-${industry.id}-heading`}
               >
                 <div className="flex items-center gap-3 mb-6">
@@ -235,19 +236,19 @@ export default function IndustriesPage() {
                 <div className="grid md:grid-cols-2 gap-6">
                   <Card>
                     <CardHeader>
-                      <CardTitle className="text-base text-[#94a3b8] uppercase tracking-wider font-semibold">
+                      <CardTitle className="text-sm text-[#94a3b8] uppercase tracking-wider font-bold">
                         Common Challenges
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <ul className="space-y-2" role="list">
+                      <ul className="space-y-3" role="list">
                         {industry.challenges.map((item) => (
                           <li
                             key={item}
-                            className="flex items-start gap-2 text-[#374151]"
+                            className="flex items-start gap-2 text-[#374151] text-sm"
                           >
                             <span
-                              className="mt-1.5 h-2 w-2 rounded-full bg-[#94a3b8] shrink-0"
+                              className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#94a3b8] shrink-0"
                               aria-hidden="true"
                             />
                             {item}
@@ -256,16 +257,16 @@ export default function IndustriesPage() {
                       </ul>
                     </CardContent>
                   </Card>
-                  <Card>
+                  <Card className="border-blue-100 bg-blue-50/30">
                     <CardHeader>
-                      <CardTitle className="text-base text-[#c8962c] uppercase tracking-wider font-semibold">
+                      <CardTitle className="text-sm text-[#c8962c] uppercase tracking-wider font-bold">
                         Our Solutions
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <ul className="space-y-2" role="list">
+                      <ul className="space-y-3" role="list">
                         {industry.solutions.map((item) => (
-                          <li key={item} className="flex items-start gap-2 text-[#374151]">
+                          <li key={item} className="flex items-start gap-2 text-[#374151] text-sm font-medium">
                             <CheckCircle
                               className="h-4 w-4 text-[#c8962c] shrink-0 mt-0.5"
                               aria-hidden="true"
@@ -277,9 +278,9 @@ export default function IndustriesPage() {
                     </CardContent>
                   </Card>
                 </div>
-                <div className="mt-6">
+                <div className="mt-8">
                   <Link href="/contact">
-                    <Button variant="outline" size="sm">
+                    <Button variant="outline">
                       Talk to a {industry.title} Specialist
                       <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
                     </Button>
@@ -292,17 +293,17 @@ export default function IndustriesPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#1e3a5f] text-white py-16" aria-labelledby="industries-cta-heading">
+      <section className="bg-[#1e3a5f] text-white py-20" aria-labelledby="industries-cta-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 id="industries-cta-heading" className="text-3xl font-bold mb-4">
             Your Industry. Our Expertise.
           </h2>
-          <p className="text-blue-200 mb-7 max-w-xl mx-auto">
+          <p className="text-blue-200 mb-8 max-w-xl mx-auto">
             Speak with a specialist who understands your sector&apos;s unique
             compliance and recovery challenges.
           </p>
           <Link href="/contact">
-            <Button size="lg" variant="secondary">
+            <Button size="lg" variant="secondary" className="bg-[#c8962c] hover:bg-[#b08425] text-white border-none">
               Request an Industry Consultation
               <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
             </Button>
