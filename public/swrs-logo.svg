@@ -1,0 +1,13 @@
+<svg width="520" height="96" viewBox="0 0 520 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B0B72"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+  </defs>
+  <text x="0" y="74" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="82" font-weight="800" fill="url(#g)">SWRS</text>
+  <polygon points="200,17 228,36 195,49" fill="#8DD4FF"/>
+  <text x="305" y="38" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="500" fill="#1D4ED8">Southwest</text>
+  <text x="305" y="62" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="500" fill="#1D4ED8">Recovery</text>
+  <text x="305" y="86" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="500" fill="#1D4ED8">Services</text>
+</svg>

@@ -200,7 +200,7 @@ export function ContactForm() {
               htmlFor="consent"
               className="text-sm text-[#64748b] leading-relaxed"
             >
-              I agree to be contacted by Meridian Recovery Solutions regarding
+              I agree to be contacted by Southwest Recovery Services regarding
               my inquiry. I have read and accept the{" "}
               <Link
                 href="/privacy-policy"

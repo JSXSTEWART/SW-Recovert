@@ -4,13 +4,13 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://meridianrecovery.com"),
+  metadataBase: new URL("https://www.swrecovery.com"),
   title: {
-    default: "Meridian Recovery Solutions | Professional Debt Recovery & AR Management",
-    template: "%s | Meridian Recovery Solutions",
+    default: "Southwest Recovery Services | Professional Debt Recovery & AR Management",
+    template: "%s | Southwest Recovery Services",
   },
   description:
-    "Meridian Recovery Solutions provides professional debt recovery, revenue cycle management, accounts receivable management, and business process outsourcing services across commercial, healthcare, government, and more.",
+    "Southwest Recovery Services provides professional debt recovery, revenue cycle management, accounts receivable management, and business process outsourcing services across commercial, healthcare, government, and more.",
   keywords: [
     "debt recovery",
     "accounts receivable management",
@@ -19,19 +19,20 @@ export const metadata: Metadata = {
     "business process outsourcing",
     "healthcare collections",
     "commercial debt collection",
+    "southwest recovery services",
   ],
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://meridianrecovery.com",
-    siteName: "Meridian Recovery Solutions",
-    title: "Meridian Recovery Solutions | Professional Debt Recovery",
+    url: "https://www.swrecovery.com",
+    siteName: "Southwest Recovery Services",
+    title: "Southwest Recovery Services | Professional Debt Recovery",
     description:
       "Trusted debt recovery and accounts receivable management for commercial, healthcare, government, and more.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Meridian Recovery Solutions",
+    title: "Southwest Recovery Services",
     description: "Professional debt recovery and AR management services.",
   },
   robots: {

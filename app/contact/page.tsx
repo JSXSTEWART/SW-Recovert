@@ -6,26 +6,26 @@ import { ContactForm } from "@/components/contact/contact-form";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Contact Meridian Recovery Solutions for a free consultation on debt recovery, AR management, or revenue cycle services. Reach our team by phone, email, or the form below.",
+    "Contact Southwest Recovery Services for a free consultation on debt recovery, AR management, or revenue cycle services. Reach our team by phone, email, or the form below.",
 };
 
 const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "1-800-555-1234",
-    href: "tel:+18005551234",
+    value: "1-866-551-4684",
+    href: "tel:+18665514684",
   },
   {
     icon: Mail,
     label: "Email",
-    value: "info@meridianrecovery.com",
-    href: "mailto:info@meridianrecovery.com",
+    value: "info@swrecovery.com",
+    href: "mailto:info@swrecovery.com",
   },
   {
     icon: MapPin,
     label: "Address",
-    value: "123 Financial Plaza, Suite 400\nNew York, NY 10001",
+    value: "16200 Addison Road, Suite 260\nAddison, TX 75001",
     href: "https://maps.google.com",
   },
   {

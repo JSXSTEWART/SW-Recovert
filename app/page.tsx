@@ -25,9 +25,9 @@ import {
 import { Badge } from "@/components/ui/badge";
 
 export const metadata: Metadata = {
-  title: "Professional Debt Recovery & Accounts Receivable Management",
+  title: "Financial BPO & Receivables Management Services",
   description:
-    "Meridian Recovery Solutions delivers results-driven debt recovery, revenue cycle management, and AR management services. Trusted by healthcare, government, commercial, and more.",
+    "Southwest Recovery Services delivers scalable financial business process outsourcing, receivables management, and compliance-driven recovery programs.",
 };
 
 const services = [
@@ -135,15 +135,12 @@ export default function HomePage() {
               id="hero-heading"
               className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"
             >
-              Recover Revenue.
+              Optimize Performance.
               <br />
-              <span className="text-[#c8962c]">Protect Relationships.</span>
+              <span className="text-[#c8962c]">Strengthen Cash Flow.</span>
             </h1>
             <p className="text-lg sm:text-xl text-blue-200 leading-relaxed mb-8 max-w-2xl">
-              Meridian Recovery Solutions delivers compliant, results-driven debt
-              recovery and accounts receivable management for commercial,
-              healthcare, government, and more - so you can focus on your core
-              business.
+              Southwest Recovery Services delivers scalable financial BPO and receivables programs for healthcare, government, utilities, and commercial organizations - so your internal teams can stay focused on growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Link href="/contact">
@@ -187,13 +184,13 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <Badge variant="secondary" className="mb-4">
-                Why Meridian
+                Why SWRS
               </Badge>
               <h2
                 id="why-heading"
                 className="text-3xl sm:text-4xl font-bold text-[#0f1c2e] mb-5"
               >
-                A Partner You Can Trust With Your Bottom Line
+                A Strategic Partner for Receivables, Compliance, and Customer Experience
               </h2>
               <p className="text-[#64748b] leading-relaxed mb-8">
                 For over 25 years, we&apos;ve helped organizations of all sizes
@@ -222,7 +219,7 @@ export default function HomePage() {
             </div>
             <div className="bg-[#f4f6f9] rounded-2xl p-8">
               <blockquote className="text-lg italic text-[#0f1c2e] leading-relaxed">
-                &ldquo;Meridian&rsquo;s team recovered 91% of our aged receivables
+                &ldquo;Southwest Recovery Services&rsquo; team recovered 91% of our aged receivables
                 in just 6 months - results we never thought possible. Their
                 compliance-first approach gave us complete confidence.&rdquo;
               </blockquote>
@@ -430,7 +427,7 @@ export default function HomePage() {
           </h2>
           <p className="text-blue-200 text-lg mb-8 max-w-2xl mx-auto">
             Schedule a free consultation with our recovery specialists and
-            discover how Meridian can improve your cash flow - with no upfront
+            discover how Southwest Recovery Services can improve your cash flow - with no upfront
             cost.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -446,7 +443,7 @@ export default function HomePage() {
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-[#1e3a5f]"
               >
-                Call 1-800-555-1234
+                Call 1-866-551-4684
               </Button>
             </a>
           </div>

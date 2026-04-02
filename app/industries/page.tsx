@@ -18,7 +18,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 export const metadata: Metadata = {
   title: "Industries We Serve",
   description:
-    "Meridian Recovery Solutions serves commercial, healthcare, government, utilities, insurance, property management, and automotive finance industries with specialized debt recovery solutions.",
+    "Southwest Recovery Services serves commercial, healthcare, government, utilities, insurance, property management, and automotive finance industries with specialized debt recovery solutions.",
 };
 
 const industries = [
