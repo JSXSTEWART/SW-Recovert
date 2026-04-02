@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { blogPosts, migrationPages } from "@/lib/content";
 
 const baseUrl = "https://www.swrecovery.com";
 
@@ -16,6 +17,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact",
     "/privacy-policy",
     "/privacy",
+    ...migrationPages.map((page) => page.href),
+    ...blogPosts.map((post) => `/blog/${post.slug}`),
   ];
 
   return routes.map((route) => ({
