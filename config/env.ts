@@ -1,8 +1,28 @@
 type EnvConfig = {
   NEXT_PUBLIC_SITE_URL: string;
+  NOTION_API_KEY: string;
+  NOTION_PAGES_DB_ID: string;
+  NOTION_BLOG_DB_ID: string;
+  NOTION_SERVICES_DB_ID: string;
+  NOTION_INDUSTRIES_DB_ID: string;
+  NOTION_TESTIMONIALS_DB_ID: string;
+  NOTION_TEAM_DB_ID: string;
+  NOTION_LOCATIONS_DB_ID: string;
+  NOTION_SETTINGS_DB_ID: string;
+  REVALIDATE_SECRET: string;
 };
 
 export const env: EnvConfig = {
   NEXT_PUBLIC_SITE_URL:
     process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  NOTION_API_KEY: process.env.NOTION_API_KEY ?? "",
+  NOTION_PAGES_DB_ID: process.env.NOTION_PAGES_DB_ID ?? "",
+  NOTION_BLOG_DB_ID: process.env.NOTION_BLOG_DB_ID ?? "",
+  NOTION_SERVICES_DB_ID: process.env.NOTION_SERVICES_DB_ID ?? "",
+  NOTION_INDUSTRIES_DB_ID: process.env.NOTION_INDUSTRIES_DB_ID ?? "",
+  NOTION_TESTIMONIALS_DB_ID: process.env.NOTION_TESTIMONIALS_DB_ID ?? "",
+  NOTION_TEAM_DB_ID: process.env.NOTION_TEAM_DB_ID ?? "",
+  NOTION_LOCATIONS_DB_ID: process.env.NOTION_LOCATIONS_DB_ID ?? "",
+  NOTION_SETTINGS_DB_ID: process.env.NOTION_SETTINGS_DB_ID ?? "",
+  REVALIDATE_SECRET: process.env.REVALIDATE_SECRET ?? "",
 };

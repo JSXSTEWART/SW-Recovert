@@ -1,30 +1,39 @@
 import type { MetadataRoute } from "next";
-import { blogPosts, migrationPages } from "@/lib/content";
+import { getPages, getBlogPosts } from "@/lib/notion";
+import { fallbackPages } from "@/lib/fallback-pages";
 
 const baseUrl = "https://www.swrecovery.com";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = [
-    "",
-    "/about",
-    "/about/locations",
-    "/services",
-    "/industries",
-    "/resources",
-    "/blog",
-    "/customer-support",
-    "/locations",
-    "/contact",
-    "/privacy-policy",
-    "/privacy",
-    ...migrationPages.map((page) => page.href),
-    ...blogPosts.map((post) => `/blog/${post.slug}`),
-  ];
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const [pages, blogPosts] = await Promise.all([getPages(), getBlogPosts()]);
 
-  return routes.map((route) => ({
-    url: `${baseUrl}${route}`,
+  const pageSlugs =
+    pages.length > 0
+      ? pages.map((p) => p.slug)
+      : fallbackPages.map((p) => p.slug);
+
+  const pageEntries: MetadataRoute.Sitemap = pageSlugs.map((slug) => ({
+    url: `${baseUrl}/${slug}`,
     lastModified: new Date(),
     changeFrequency: "weekly",
-    priority: route === "" ? 1 : 0.8,
+    priority: slug === "" ? 1 : 0.8,
   }));
+
+  const blogEntries: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.publishedAt),
+    changeFrequency: "weekly",
+    priority: 0.7,
+  }));
+
+  const staticEntries: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+  ];
+
+  return [...pageEntries, ...staticEntries, ...blogEntries];
 }
