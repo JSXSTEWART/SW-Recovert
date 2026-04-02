@@ -4,7 +4,10 @@ import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Badge } from "@/components/ui/badge";
-import { blogPosts } from "@/lib/content";
+import { getBlogPost, getBlogPosts } from "@/lib/notion";
+import { NotionBlockRenderer } from "@/lib/notion-renderer";
+
+export const revalidate = 60;
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -12,29 +15,35 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const post = blogPosts.find((item) => item.slug === slug);
+  const result = await getBlogPost(slug);
 
-  if (!post) {
+  if (!result) {
     return { title: "Post Not Found" };
   }
 
   return {
-    title: post.title,
-    description: post.excerpt,
+    title: result.post.title,
+    description: result.post.excerpt,
+    openGraph: result.post.ogImage
+      ? { images: [{ url: result.post.ogImage }] }
+      : undefined,
   };
 }
 
-export function generateStaticParams() {
-  return blogPosts.map((post) => ({ slug: post.slug }));
+export async function generateStaticParams() {
+  const posts = await getBlogPosts();
+  return posts.map((post) => ({ slug: post.slug }));
 }
 
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
-  const post = blogPosts.find((item) => item.slug === slug);
+  const result = await getBlogPost(slug);
 
-  if (!post) {
+  if (!result) {
     notFound();
   }
+
+  const { post, blocks } = result;
 
   return (
     <section className="py-16">
@@ -57,14 +66,17 @@ export default async function BlogPostPage({ params }: Props) {
           {post.readTime}
         </p>
 
-        <div className="space-y-4 text-[#334155] leading-relaxed">
-          <p>{post.excerpt}</p>
-          <p>
-            This article page is part of the ongoing site rebuild and is seeded from the production sitemap.
-            Long-form content and citations can be expanded in future iterations while keeping URLs in place for
-            internal linking and SEO continuity.
-          </p>
-        </div>
+        {blocks.length > 0 ? (
+          <NotionBlockRenderer blocks={blocks} />
+        ) : (
+          <div className="space-y-4 text-[#334155] leading-relaxed">
+            <p>{post.excerpt}</p>
+            <p>
+              Full article content is managed in Notion. Connect your Notion
+              database to see the complete post.
+            </p>
+          </div>
+        )}
       </Container>
     </section>
   );

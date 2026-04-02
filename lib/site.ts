@@ -1,3 +1,7 @@
+import { getSiteSettings } from "@/lib/notion";
+import type { SiteSettings } from "@/lib/notion-types";
+
+/** Static fallback — used when Notion is unavailable */
 export const siteConfig = {
   name: "Southwest Recovery Services",
   description:
@@ -10,3 +14,8 @@ export const siteConfig = {
   paymentPhone: "+1 (866) 558-3328",
   headquarters: "16200 Addison Road, Suite 260, Addison, TX 75001",
 };
+
+/** Fetch site settings from Notion with fallback */
+export async function getSiteConfig(): Promise<SiteSettings> {
+  return getSiteSettings();
+}

@@ -5,11 +5,13 @@ import { PageHero } from "@/components/sections/page-hero";
 import { Container } from "@/components/ui/container";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { blogPosts } from "@/lib/content";
+import { getBlogPosts } from "@/lib/notion";
+
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "Blog",
-  description: "Debt recovery, compliance, and AR strategy articles migrated from SW Recovery sitemap priorities.",
+  description: "Debt recovery, compliance, and AR strategy articles from Southwest Recovery Services.",
 };
 
 const toneByCategory: Record<string, "accent" | "secondary" | "default" | "outline"> = {
@@ -19,12 +21,14 @@ const toneByCategory: Record<string, "accent" | "secondary" | "default" | "outli
   Local: "accent",
 };
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  const blogPosts = await getBlogPosts();
+
   return (
     <>
       <PageHero
         title="Blog"
-        description="A growing library of articles prioritized from the live swrecovery.com sitemap migration list."
+        description="Guides, compliance updates, and strategies for receivables management professionals."
       />
       <section className="py-16">
         <Container>
