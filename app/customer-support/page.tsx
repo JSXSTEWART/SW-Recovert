@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Customer Support",
@@ -25,12 +26,12 @@ export default function CustomerSupportPage() {
           <div className="rounded-2xl border border-[#e2e8f0] p-6">
             <h2 className="text-xl font-semibold text-[#0f1c2e] mb-2">Call Customer Service</h2>
             <p className="text-[#64748b] mb-4">Speak with an account representative Monday-Friday.</p>
-            <a href="tel:+18668373065" className="text-[#1e3a5f] font-semibold">1-866-837-3065</a>
+            <a href={`tel:${siteConfig.customerServicePhone.replace(/[^\d+]/g, "")}`} className="text-[#1e3a5f] font-semibold">{siteConfig.customerServicePhone}</a>
           </div>
           <div className="rounded-2xl border border-[#e2e8f0] p-6">
             <h2 className="text-xl font-semibold text-[#0f1c2e] mb-2">Make a Payment by Phone</h2>
             <p className="text-[#64748b] mb-4">Automated and agent-assisted payment options are available.</p>
-            <a href="tel:+18665583328" className="text-[#1e3a5f] font-semibold">1-866-558-3328</a>
+            <a href={`tel:${siteConfig.paymentPhone.replace(/[^\d+]/g, "")}`} className="text-[#1e3a5f] font-semibold">{siteConfig.paymentPhone}</a>
           </div>
         </div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">

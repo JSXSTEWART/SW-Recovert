@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/page-hero";
 import { Container } from "@/components/ui/container";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -20,7 +21,7 @@ export default function PrivacyPage() {
           <h2 className="text-xl font-semibold text-foreground">Data protection</h2>
           <p>We maintain administrative and technical safeguards designed to protect personal data from unauthorized access.</p>
           <h2 className="text-xl font-semibold text-foreground">Contact</h2>
-          <p>For privacy questions, email privacy@apexreceivables.com.</p>
+          <p>For privacy questions, email {siteConfig.privacyEmail}.</p>
         </Container>
       </section>
     </>

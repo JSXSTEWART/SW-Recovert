@@ -12,13 +12,13 @@ function Badge({
 }: BadgeProps) {
   const variants: Record<string, string> = {
     default:
-      "bg-[#1e3a5f] text-white",
+      "bg-primary text-primary-foreground",
     secondary:
-      "bg-[#f4f6f9] text-[#1e3a5f]",
+      "bg-muted text-primary",
     outline:
-      "border border-[#1e3a5f] text-[#1e3a5f] bg-transparent",
+      "border border-primary text-primary bg-transparent",
     accent:
-      "bg-[#c8962c] text-white",
+      "bg-secondary text-secondary-foreground",
   };
 
   return (

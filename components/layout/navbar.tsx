@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { siteConfig } from "@/lib/site";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -36,8 +37,8 @@ export function Navbar() {
             ))}
           </nav>
           <div className="hidden md:flex items-center gap-3">
-            <a href="tel:+18665514684" className="flex items-center gap-1.5 text-sm font-medium text-[#1e3a5f] hover:text-[#c8962c] transition-colors" aria-label="Call us at 1-866-551-4684">
-              <Phone className="h-4 w-4" aria-hidden="true" />1-866-551-4684
+            <a href={`tel:${siteConfig.phone.replace(/[^\d+]/g, "")}`} className="flex items-center gap-1.5 text-sm font-medium text-[#1e3a5f] hover:text-[#c8962c] transition-colors" aria-label={`Call us at ${siteConfig.phone}`}>
+              <Phone className="h-4 w-4" aria-hidden="true" />{siteConfig.phone}
             </a>
             <Button variant="outline" size="sm" onClick={() => (window.location.href = "/customer-support")}>Make a Payment</Button>
             <Button variant="primary" size="sm" onClick={() => (window.location.href = "/contact")}>Get a Free Consultation</Button>
@@ -56,7 +57,7 @@ export function Navbar() {
             </Link>
           ))}
           <div className="pt-3 pb-1 border-t border-[#e2e8f0] mt-2 flex flex-col gap-2">
-            <a href="tel:+18665514684" className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-[#1e3a5f]"><Phone className="h-4 w-4" aria-hidden="true" />1-866-551-4684</a>
+            <a href={`tel:${siteConfig.phone.replace(/[^\d+]/g, "")}`} className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-[#1e3a5f]"><Phone className="h-4 w-4" aria-hidden="true" />{siteConfig.phone}</a>
             <Link href="/customer-support" onClick={() => setMobileOpen(false)}><Button variant="outline" size="sm" className="w-full">Make a Payment</Button></Link>
             <Link href="/contact" onClick={() => setMobileOpen(false)}><Button variant="primary" size="sm" className="w-full">Get a Free Consultation</Button></Link>
           </div>

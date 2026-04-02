@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Phone, Mail, MapPin, Globe, Share2 } from "lucide-react";
+import { siteConfig } from "@/lib/site";
 
 const footerLinks = {
   company: [
@@ -36,10 +37,10 @@ export function Footer() {
             </Link>
             <p className="mt-4 text-sm text-blue-200 leading-relaxed">Financial business process outsourcing and receivables management services with a compliance-first approach.</p>
             <div className="mt-5 space-y-2 text-sm text-blue-200">
-              <a href="tel:+18665514684" className="flex items-center gap-2 hover:text-white transition-colors" aria-label="Phone: 1-866-551-4684"><Phone className="h-4 w-4 shrink-0 text-[#c8962c]" aria-hidden="true" />Main: 1-866-551-4684</a>
-              <a href="tel:+18668373065" className="flex items-center gap-2 hover:text-white transition-colors" aria-label="Customer Service: 1-866-837-3065"><Phone className="h-4 w-4 shrink-0 text-[#c8962c]" aria-hidden="true" />Support: 1-866-837-3065</a>
-              <a href="mailto:info@swrecovery.com" className="flex items-center gap-2 hover:text-white transition-colors" aria-label="Email: info@swrecovery.com"><Mail className="h-4 w-4 shrink-0 text-[#c8962c]" aria-hidden="true" />info@swrecovery.com</a>
-              <address className="flex items-start gap-2 not-italic"><MapPin className="h-4 w-4 shrink-0 mt-0.5 text-[#c8962c]" aria-hidden="true" /><span>16200 Addison Road, Suite 260<br />Addison, TX 75001</span></address>
+              <a href={`tel:${siteConfig.phone.replace(/[^\d+]/g, "")}`} className="flex items-center gap-2 hover:text-white transition-colors" aria-label={`Phone: ${siteConfig.phone}`}><Phone className="h-4 w-4 shrink-0 text-[#c8962c]" aria-hidden="true" />Main: {siteConfig.phone}</a>
+              <a href={`tel:${siteConfig.customerServicePhone.replace(/[^\d+]/g, "")}`} className="flex items-center gap-2 hover:text-white transition-colors" aria-label={`Customer Service: ${siteConfig.customerServicePhone}`}><Phone className="h-4 w-4 shrink-0 text-[#c8962c]" aria-hidden="true" />Support: {siteConfig.customerServicePhone}</a>
+              <a href={`mailto:${siteConfig.email}`} className="flex items-center gap-2 hover:text-white transition-colors" aria-label={`Email: ${siteConfig.email}`}><Mail className="h-4 w-4 shrink-0 text-[#c8962c]" aria-hidden="true" />{siteConfig.email}</a>
+              <address className="flex items-start gap-2 not-italic"><MapPin className="h-4 w-4 shrink-0 mt-0.5 text-[#c8962c]" aria-hidden="true" /><span>{siteConfig.headquarters.split(", ").slice(0, 2).join(", ")}<br />{siteConfig.headquarters.split(", ").slice(2).join(", ")}</span></address>
             </div>
             <div className="mt-5 flex gap-3">
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors" aria-label="LinkedIn"><Globe className="h-4 w-4" aria-hidden="true" /></a>
