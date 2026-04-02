@@ -81,24 +81,23 @@ export default function AboutPage() {
   return (
     <>
       <section
-        className="bg-[#1e3a5f] text-white py-16 lg:py-20"
+        className="bg-gradient-to-r from-[#1e3a5f] to-[#2a4f76] text-white py-16 lg:py-20"
         aria-labelledby="about-hero-heading"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Badge variant="accent" className="mb-4">
+          <Badge variant="accent" className="mb-4 border-none bg-[#c8962c]/20 text-[#f6d99d]">
             About Us
           </Badge>
           <h1
             id="about-hero-heading"
             className="text-4xl sm:text-5xl font-bold mb-5 max-w-2xl"
           >
-            25 Years of Trusted Recovery Expertise
+            Built for Modern Receivables Performance
           </h1>
           <p className="text-blue-200 text-lg max-w-2xl leading-relaxed">
-            Founded in 1999, Southwest Recovery Services has grown into one of
-            the most trusted names in debt recovery and accounts receivable
-            management - built on a foundation of compliance, transparency, and
-            measurable results.
+            Since 1999, Southwest Recovery Services has partnered with finance,
+            revenue cycle, and operations teams to improve cash flow while
+            safeguarding compliance, reputation, and customer relationships.
           </p>
         </div>
       </section>
@@ -109,7 +108,7 @@ export default function AboutPage() {
             <div>
               <Badge variant="secondary" className="mb-4">Our Mission</Badge>
               <h2 id="mission-heading" className="text-3xl sm:text-4xl font-bold text-[#0f1c2e] mb-5">
-                Recovering Revenue Without Compromising Integrity
+                Better Outcomes Through Ethical Recovery
               </h2>
               <div className="space-y-4 text-[#64748b] leading-relaxed">
                 <p>

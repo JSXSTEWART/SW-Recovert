@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { MapPin, Phone } from "lucide-react";
+import { MapPin, Phone, Clock3 } from "lucide-react";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -15,27 +15,30 @@ const locations = [
     city: "Addison, TX (Corporate Office)",
     address: siteConfig.headquarters.replace(", ", "\n").replace(", ", "\n"),
     phone: siteConfig.phone,
+    hours: "Mon-Fri, 8:00 AM-6:00 PM ET",
   },
   {
     city: "Phoenix, AZ (Operations)",
     address: "Regional Operations Center\nPhoenix Metro Area",
     phone: siteConfig.phone,
+    hours: "Mon-Fri, 8:00 AM-8:00 PM ET",
   },
   {
     city: "Houston, TX (Operations)",
     address: "Regional Operations Center\nHouston Metro Area",
     phone: siteConfig.phone,
+    hours: "Mon-Fri, 8:00 AM-8:00 PM ET",
   },
 ];
 
 export default function LocationsPage() {
   return (
     <>
-      <section className="bg-[#1e3a5f] text-white py-16 lg:py-20" aria-labelledby="locations-hero-heading">
+      <section className="bg-gradient-to-r from-[#1e3a5f] to-[#2a5278] text-white py-16 lg:py-20" aria-labelledby="locations-hero-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Badge variant="accent" className="mb-4">Locations</Badge>
+          <Badge variant="accent" className="mb-4 border-none bg-[#c8962c]/20 text-[#f6d99d]">Locations</Badge>
           <h1 id="locations-hero-heading" className="text-4xl sm:text-5xl font-bold mb-5 max-w-2xl">Regional Presence, National Coverage</h1>
-          <p className="text-blue-200 text-lg max-w-2xl leading-relaxed">Southwest Recovery Services supports clients across the U.S. with experienced teams and compliance-first operations.</p>
+          <p className="text-blue-200 text-lg max-w-2xl leading-relaxed">Visit or call the location that best supports your team. All offices follow standardized compliance protocols and centralized quality monitoring.</p>
         </div>
       </section>
 
@@ -47,6 +50,7 @@ export default function LocationsPage() {
               <CardContent className="space-y-3 text-sm text-[#475569]">
                 <p className="flex gap-2 whitespace-pre-line"><MapPin className="h-4 w-4 mt-0.5 text-[#1e3a5f]" />{location.address}</p>
                 <a href={`tel:${location.phone.replace(/[^\d+]/g, "")}`} className="flex gap-2 hover:text-[#1e3a5f] transition-colors"><Phone className="h-4 w-4 mt-0.5 text-[#1e3a5f]" />{location.phone}</a>
+                <p className="flex gap-2"><Clock3 className="h-4 w-4 mt-0.5 text-[#1e3a5f]" />{location.hours}</p>
               </CardContent>
             </Card>
           ))}

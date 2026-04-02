@@ -162,23 +162,23 @@ export default function IndustriesPage() {
     <>
       {/* Hero */}
       <section
-        className="bg-[#1e3a5f] text-white py-16 lg:py-20"
+        className="bg-gradient-to-r from-[#1e3a5f] to-[#2e5a84] text-white py-16 lg:py-20"
         aria-labelledby="industries-hero-heading"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Badge variant="secondary" className="mb-4 bg-blue-500/20 text-blue-200 border-none">
+          <Badge variant="secondary" className="mb-4 bg-[#c8962c]/20 text-[#f6d99d] border-none">
             Industries We Serve
           </Badge>
           <h1
             id="industries-hero-heading"
             className="text-4xl sm:text-5xl font-bold mb-5 max-w-2xl"
           >
-            Specialized Recovery for Every Sector
+            Sector Expertise That Translates to Results
           </h1>
           <p className="text-blue-200 text-lg max-w-2xl leading-relaxed">
-            Compliance requirements, consumer sensitivities, and regulatory
-            environments vary dramatically by industry. Our specialized teams
-            are trained to navigate the unique demands of each sector we serve.
+            Every industry has different billing cycles, dispute patterns, and
+            compliance requirements. Our dedicated specialists tailor strategy,
+            communication, and reporting to your sector&apos;s operating reality.
           </p>
         </div>
       </section>

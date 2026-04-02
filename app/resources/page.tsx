@@ -115,22 +115,22 @@ export default function ResourcesPage() {
   return (
     <>
       <section
-        className="bg-[#1e3a5f] text-white py-16 lg:py-20"
+        className="bg-gradient-to-br from-[#1e3a5f] via-[#23486d] to-[#2f5d88] text-white py-16 lg:py-20"
         aria-labelledby="resources-hero-heading"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Badge variant="accent" className="mb-4">
+          <Badge variant="accent" className="mb-4 border-none bg-[#c8962c]/20 text-[#f6d99d]">
             Resources &amp; Blog
           </Badge>
           <h1
             id="resources-hero-heading"
             className="text-4xl sm:text-5xl font-bold mb-5 max-w-2xl"
           >
-            Insights for Receivables Professionals
+            Practical Insights for Recovery &amp; AR Teams
           </h1>
           <p className="text-blue-200 text-lg max-w-2xl leading-relaxed">
-            Stay current with compliance updates, industry best practices, and
-            actionable strategies to improve your recovery performance.
+            Explore implementation-ready guides, compliance briefings, and
+            field-tested playbooks your team can use immediately.
           </p>
         </div>
       </section>

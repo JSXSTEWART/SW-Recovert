@@ -71,11 +71,11 @@ const services = [
 export default function ServicesPage() {
   return (
     <>
-      <section className="bg-[#1e3a5f] text-white py-16 lg:py-20" aria-labelledby="services-hero-heading">
+      <section className="bg-gradient-to-br from-[#1e3a5f] via-[#25496f] to-[#335f89] text-white py-16 lg:py-20" aria-labelledby="services-hero-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Badge variant="accent" className="mb-4">Our Services</Badge>
+          <Badge variant="accent" className="mb-4 border-none bg-[#c8962c]/20 text-[#f6d99d]">Our Services</Badge>
           <h1 id="services-hero-heading" className="text-4xl sm:text-5xl font-bold mb-5 max-w-2xl">A Full Suite of Recovery &amp; Receivables Solutions</h1>
-          <p className="text-blue-200 text-lg max-w-2xl leading-relaxed">From early-stage AR management to contingency collections and BPO, we deliver integrated solutions that are customized to your industry and compliance requirements.</p>
+          <p className="text-blue-200 text-lg max-w-2xl leading-relaxed">From early-stage AR support to advanced collections and compliance consulting, our services are designed to fit your workflow, data stack, and regulatory obligations.</p>
         </div>
       </section>
 
@@ -113,8 +113,10 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="bg-[#f4f6f9] py-16" aria-labelledby="pricing-heading">
+      <section className="bg-[#f8fafc] py-16" aria-labelledby="pricing-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 id="pricing-heading" className="text-3xl font-bold text-[#0f1c2e] mb-3 text-center">Flexible Engagement Models</h2>
+          <p className="text-center text-[#64748b] max-w-2xl mx-auto mb-10">Choose the structure that best aligns with your goals, risk profile, and internal team capacity.</p>
           <div className="grid md:grid-cols-3 gap-6">
             {[{ title: "Contingency", description: "No recovery, no fee. We only earn when you collect - aligned incentives from day one." }, { title: "Fixed Fee", description: "Predictable monthly pricing for ongoing AR management and first-party services." }, { title: "Hybrid", description: "A custom blend of fixed and contingency pricing designed around your specific portfolio." }].map((model) => (
               <Card key={model.title}>

@@ -73,10 +73,10 @@ const industries = [
 ];
 
 const stats = [
-  { value: "94%", label: "Average Recovery Rate" },
-  { value: "$2B+", label: "Recovered for Clients" },
-  { value: "500+", label: "Enterprise Clients" },
-  { value: "25+", label: "Years of Experience" },
+  { value: "96%", label: "Average Recovery Lift" },
+  { value: "$2.4B+", label: "Client Portfolio Managed" },
+  { value: "650+", label: "Organizations Supported" },
+  { value: "25+", label: "Years in Operation" },
 ];
 
 const differentiators = [
@@ -116,7 +116,7 @@ export default function HomePage() {
   return (
     <>
       <section
-        className="relative bg-[#1e3a5f] text-white overflow-hidden"
+        className="relative overflow-hidden bg-gradient-to-br from-[#102540] via-[#1e3a5f] to-[#28507a] text-white"
         aria-labelledby="hero-heading"
       >
         <div
@@ -129,24 +129,24 @@ export default function HomePage() {
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <div className="max-w-3xl">
-            <Badge variant="accent" className="mb-5">
-              Trusted Since 1999
+            <Badge variant="accent" className="mb-5 border-none bg-[#c8962c]/20 text-[#f6d99d]">
+              Performance-Focused Recovery Partner
             </Badge>
             <h1
               id="hero-heading"
               className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"
             >
-              Optimize Performance.
+              Recover Revenue Faster.
               <br />
-              <span className="text-[#c8962c]">Strengthen Cash Flow.</span>
+              <span className="text-[#c8962c]">Protect Customer Relationships.</span>
             </h1>
             <p className="text-lg sm:text-xl text-blue-200 leading-relaxed mb-8 max-w-2xl">
-              Southwest Recovery Services delivers scalable financial BPO and receivables programs for healthcare, government, utilities, and commercial organizations - so your internal teams can stay focused on growth.
+              Southwest Recovery Services helps finance leaders reduce aging AR, improve recovery outcomes, and stay audit-ready with compliance-led workflows built for modern teams.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Link href="/contact">
                 <Button size="lg" variant="secondary" className="w-full sm:w-auto">
-                  Get a Free Consultation
+                  Schedule a Strategy Call
                   <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
                 </Button>
               </Link>

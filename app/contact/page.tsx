@@ -41,22 +41,22 @@ export default function ContactPage() {
   return (
     <>
       <section
-        className="bg-[#1e3a5f] text-white py-16 lg:py-20"
+        className="bg-gradient-to-br from-[#1e3a5f] via-[#254a70] to-[#2f5e89] text-white py-16 lg:py-20"
         aria-labelledby="contact-hero-heading"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Badge variant="accent" className="mb-4">
+          <Badge variant="accent" className="mb-4 border-none bg-[#c8962c]/20 text-[#f6d99d]">
             Contact Us
           </Badge>
           <h1
             id="contact-hero-heading"
             className="text-4xl sm:text-5xl font-bold mb-5 max-w-2xl"
           >
-            Let&apos;s Talk About Your Recovery Goals
+            Let&apos;s Design a Better Recovery Program
           </h1>
           <p className="text-blue-200 text-lg max-w-2xl leading-relaxed">
-            Whether you&apos;re ready to get started or just exploring your options,
-            our specialists are ready to help. Free consultations, no obligation.
+            Tell us about your portfolio, current challenges, and goals.
+            We&apos;ll recommend a right-sized plan in a no-obligation consultation.
           </p>
         </div>
       </section>
