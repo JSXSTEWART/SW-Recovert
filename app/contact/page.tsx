@@ -31,7 +31,7 @@ const contactInfo = [
   {
     icon: Clock,
     label: "Business Hours",
-    value: "Monday–Friday: 8am–6pm ET\nSaturday: 9am–1pm ET",
+    value: "Monday-Friday: 8am-6pm ET\nSaturday: 9am-1pm ET",
     href: null,
   },
 ];
@@ -39,7 +39,6 @@ const contactInfo = [
 export default function ContactPage() {
   return (
     <>
-      {/* Hero */}
       <section
         className="bg-[#1e3a5f] text-white py-16 lg:py-20"
         aria-labelledby="contact-hero-heading"
@@ -61,11 +60,9 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Contact Content */}
       <section className="bg-white py-16 lg:py-24" aria-labelledby="contact-section-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-12">
-            {/* Contact Info */}
             <div className="lg:col-span-1">
               <h2
                 id="contact-section-heading"
@@ -120,7 +117,6 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Contact Form (Client Component) */}
             <div className="lg:col-span-2">
               <h2 className="text-xl font-bold text-[#0f1c2e] mb-6">
                 Request a Free Consultation
@@ -129,33 +125,6 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
-=======
-import { PageHero } from "@/components/sections/page-hero";
-import { Container } from "@/components/ui/container";
-import { ContactForm } from "@/components/sections/contact-form";
-import { siteConfig } from "@/lib/site";
-
-export const metadata: Metadata = {
-  title: "Contact",
-  description: "Connect with Apex Receivables Group for a consultation.",
-};
-
-export default function ContactPage() {
-  return (
-    <>
-      <PageHero title="Contact" description="Tell us about your portfolio, goals, and constraints. Our team will respond within one business day." />
-      <section className="py-16">
-        <Container className="grid gap-8 lg:grid-cols-2">
-          <ContactForm />
-          <aside className="rounded-lg border border-border bg-muted/30 p-6">
-            <h2 className="text-lg font-semibold">Talk with our team</h2>
-            <p className="mt-2 text-sm text-muted-foreground">We support enterprise and mid-market clients across the United States.</p>
-            <dl className="mt-6 space-y-3 text-sm">
-              <div><dt className="font-medium">Email</dt><dd className="text-muted-foreground">{siteConfig.email}</dd></div>
-              <div><dt className="font-medium">Phone</dt><dd className="text-muted-foreground">{siteConfig.phone}</dd></div>
-            </dl>
-          </aside>
-        </Container>
       </section>
     </>
   );

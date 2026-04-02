@@ -27,7 +27,6 @@ export function Footer() {
     <footer className="bg-[#1e3a5f] text-white" role="contentinfo">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-          {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link
               href="/"
@@ -60,7 +59,11 @@ export function Footer() {
               </a>
               <address className="flex items-start gap-2 not-italic">
                 <MapPin className="h-4 w-4 shrink-0 mt-0.5 text-[#c8962c]" aria-hidden="true" />
-                <span>123 Financial Plaza, Suite 400<br />New York, NY 10001</span>
+                <span>
+                  123 Financial Plaza, Suite 400
+                  <br />
+                  New York, NY 10001
+                </span>
               </address>
             </div>
             <div className="mt-5 flex gap-3">
@@ -85,7 +88,6 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Company Links */}
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-[#c8962c] mb-4">
               Company
@@ -104,7 +106,6 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Services Links */}
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-[#c8962c] mb-4">
               Services
@@ -123,7 +124,6 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Compliance & Legal */}
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-[#c8962c] mb-4">
               Compliance & Legal
@@ -150,7 +150,6 @@ export function Footer() {
         </div>
       </div>
 
-      {/* Bottom Bar */}
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-blue-300">
           <p>
@@ -160,38 +159,6 @@ export function Footer() {
           <p>Licensed &amp; Bonded &bull; FDCPA Compliant &bull; BBB Accredited</p>
         </div>
       </div>
-
-import { Container } from "@/components/ui/container";
-import { siteConfig } from "@/lib/site";
-
-export function Footer() {
-  return (
-    <footer className="border-t border-border bg-muted/30">
-      <Container className="grid gap-8 py-10 md:grid-cols-3">
-        <div>
-          <h3 className="text-base font-semibold">{siteConfig.name}</h3>
-          <p className="mt-2 text-sm text-muted-foreground">Compliance-first receivables performance for complex organizations.</p>
-        </div>
-        <div>
-          <h4 className="text-sm font-semibold">Company</h4>
-          <ul className="mt-2 space-y-2 text-sm text-muted-foreground">
-            <li><Link href="/about">About</Link></li>
-            <li><Link href="/services">Services</Link></li>
-            <li><Link href="/resources">Resources</Link></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="text-sm font-semibold">Legal</h4>
-          <ul className="mt-2 space-y-2 text-sm text-muted-foreground">
-            <li><Link href="/privacy">Privacy Policy</Link></li>
-            <li><Link href="/contact">Contact</Link></li>
-            <li>{siteConfig.email}</li>
-          </ul>
-        </div>
-      </Container>
-      <Container className="border-t border-border py-4 text-xs text-muted-foreground">
-        © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
-      </Container>
     </footer>
   );
 }

@@ -15,7 +15,7 @@ import { Card, CardContent } from "@/components/ui/card";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Meridian Recovery Solutions — 25+ years of trusted debt recovery, compliance expertise, and client-first service across commercial, healthcare, government, and more.",
+    "Learn about Meridian Recovery Solutions - 25+ years of trusted debt recovery, compliance expertise, and client-first service across commercial, healthcare, government, and more.",
 };
 
 const values = [
@@ -23,7 +23,7 @@ const values = [
     icon: Shield,
     title: "Compliance First",
     description:
-      "Every action we take is guided by FDCPA, HIPAA, GLBA, and applicable state regulations. Compliance isn't a checkbox — it's our foundation.",
+      "Every action we take is guided by FDCPA, HIPAA, GLBA, and applicable state regulations. Compliance isn't a checkbox - it's our foundation.",
   },
   {
     icon: Users,
@@ -80,7 +80,6 @@ const team = [
 export default function AboutPage() {
   return (
     <>
-      {/* Hero */}
       <section
         className="bg-[#1e3a5f] text-white py-16 lg:py-20"
         aria-labelledby="about-hero-heading"
@@ -98,13 +97,12 @@ export default function AboutPage() {
           <p className="text-blue-200 text-lg max-w-2xl leading-relaxed">
             Founded in 1999, Meridian Recovery Solutions has grown into one of
             the most trusted names in debt recovery and accounts receivable
-            management — built on a foundation of compliance, transparency, and
+            management - built on a foundation of compliance, transparency, and
             measurable results.
           </p>
         </div>
       </section>
 
-      {/* Mission & Story */}
       <section className="bg-white py-16 lg:py-24" aria-labelledby="mission-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -116,14 +114,14 @@ export default function AboutPage() {
               <div className="space-y-4 text-[#64748b] leading-relaxed">
                 <p>
                   At Meridian, we believe effective debt recovery doesn&apos;t require
-                  aggressive tactics — it requires expertise, technology, and a
+                  aggressive tactics - it requires expertise, technology, and a
                   genuine commitment to doing the right thing for both our clients
                   and the consumers we contact.
                 </p>
                 <p>
                   Our approach combines industry-leading compliance standards,
                   data analytics, and omnichannel outreach to achieve recovery
-                  rates that consistently outperform industry averages — while
+                  rates that consistently outperform industry averages - while
                   protecting the brand relationships you&apos;ve worked hard to build.
                 </p>
                 <p>
@@ -155,7 +153,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Values */}
       <section className="bg-[#f4f6f9] py-16 lg:py-24" aria-labelledby="values-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
@@ -190,7 +187,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Leadership Team */}
       <section className="bg-white py-16 lg:py-24" aria-labelledby="team-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
@@ -227,7 +223,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="bg-[#1e3a5f] text-white py-16" aria-labelledby="about-cta-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 id="about-cta-heading" className="text-3xl font-bold mb-4">
@@ -244,26 +239,6 @@ export default function AboutPage() {
             </Button>
           </Link>
         </div>
-=======
-import { PageHero } from "@/components/sections/page-hero";
-import { Container } from "@/components/ui/container";
-import { InfoCard } from "@/components/ui/info-card";
-
-export const metadata: Metadata = {
-  title: "About",
-  description: "Learn about Apex Receivables Group and our approach to ethical, high-performance debt recovery.",
-};
-
-export default function AboutPage() {
-  return (
-    <>
-      <PageHero title="About Apex Receivables Group" description="We help organizations recover revenue with integrity, analytics, and industry-specific expertise." />
-      <section className="py-16">
-        <Container className="grid gap-6 md:grid-cols-3">
-          <InfoCard title="Our mission" description="Deliver measurable receivables outcomes while protecting client brands and consumer dignity." />
-          <InfoCard title="Our approach" description="Compliance-led operations, transparent performance reporting, and tailored workflows by segment." />
-          <InfoCard title="Our people" description="Specialized teams in healthcare, government, commercial finance, and customer communications." />
-        </Container>
       </section>
     </>
   );

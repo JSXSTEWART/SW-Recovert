@@ -16,7 +16,7 @@ const featured = {
   badge: "Featured Guide",
   title: "The Complete Guide to FDCPA Compliance for Creditors & Collectors",
   excerpt:
-    "A detailed breakdown of the Fair Debt Collection Practices Act — what it covers, who it applies to, common violations, and how to build a compliance-first collections program that protects your organization.",
+    "A detailed breakdown of the Fair Debt Collection Practices Act - what it covers, who it applies to, common violations, and how to build a compliance-first collections program that protects your organization.",
   type: "Guide",
   readTime: "12 min read",
   href: "#",
@@ -51,7 +51,7 @@ const articles = [
     badge: "Guide",
     title: "First-Party vs. Third-Party Collections: Choosing the Right Strategy",
     excerpt:
-      "Understanding when to manage collections in-house versus outsourcing to a third party — and how to make the transition seamlessly.",
+      "Understanding when to manage collections in-house versus outsourcing to a third party - and how to make the transition seamlessly.",
     readTime: "7 min read",
     href: "#",
   },
@@ -75,7 +75,7 @@ const articles = [
     badge: "Guide",
     title: "HIPAA & Debt Collections: A Compliance Primer for Healthcare Providers",
     excerpt:
-      "What healthcare organizations need to know about permissible PHI disclosures in the collection process — and how to stay compliant.",
+      "What healthcare organizations need to know about permissible PHI disclosures in the collection process - and how to stay compliant.",
     readTime: "8 min read",
     href: "#",
   },
@@ -83,7 +83,7 @@ const articles = [
     badge: "Article",
     title: "How Technology is Transforming Accounts Receivable Management",
     excerpt:
-      "AI-driven scoring, digital self-cure tools, and real-time analytics are reshaping how organizations manage receivables. Here&apos;s what to watch.",
+      "AI-driven scoring, digital self-cure tools, and real-time analytics are reshaping how organizations manage receivables. Here's what to watch.",
     readTime: "4 min read",
     href: "#",
   },
@@ -109,18 +109,11 @@ const badgeColor: Record<string, "accent" | "secondary" | "default" | "outline">
   "Article": "secondary",
   "Compliance Update": "default",
   "Guide": "outline",
-import { PageHero } from "@/components/sections/page-hero";
-import { Container } from "@/components/ui/container";
-
-export const metadata: Metadata = {
-  title: "Resources",
-  description: "Guides, articles, and updates for debt recovery and accounts receivable leaders.",
 };
 
 export default function ResourcesPage() {
   return (
     <>
-      {/* Hero */}
       <section
         className="bg-[#1e3a5f] text-white py-16 lg:py-20"
         aria-labelledby="resources-hero-heading"
@@ -142,7 +135,6 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      {/* Resource Type Icons */}
       <section className="bg-white border-b border-[#e2e8f0] py-8" aria-label="Resource categories">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
@@ -170,7 +162,6 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      {/* Featured Article */}
       <section className="bg-white py-16" aria-labelledby="featured-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2
@@ -202,7 +193,6 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      {/* Articles Grid */}
       <section
         className="bg-[#f4f6f9] py-16 lg:py-24"
         aria-labelledby="articles-heading"
@@ -255,7 +245,6 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      {/* Newsletter */}
       <section className="bg-[#1e3a5f] text-white py-16" aria-labelledby="newsletter-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 id="newsletter-heading" className="text-3xl font-bold mb-4">
@@ -270,17 +259,6 @@ export default function ResourcesPage() {
             No spam. Unsubscribe at any time.
           </p>
         </div>
-      <PageHero title="Resources" description="Practical insights for finance, operations, and compliance teams." />
-      <section className="py-16">
-        <Container className="space-y-4">
-          {["Compliance checklist for outsourced collections", "AR KPI scorecard template", "How to evaluate RCM partners"].map((item) => (
-            <article key={item} className="rounded-lg border border-border bg-white p-6">
-              <h2 className="text-lg font-semibold">{item}</h2>
-              <p className="mt-2 text-sm text-muted-foreground">Short, actionable guidance for teams improving receivables operations.</p>
-              <Link href="/blog" className="mt-4 inline-block text-sm underline underline-offset-4">View blog index</Link>
-            </article>
-          ))}
-        </Container>
       </section>
     </>
   );
