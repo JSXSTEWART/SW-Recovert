@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getPageBySlug, getPages } from "@/lib/notion";
 import { templates } from "@/components/templates";
-import { fallbackPages } from "@/lib/fallback-pages";
+import { getRouteEntry, getAllSlugs } from "@/lib/route-map";
 import type { NotionPage, NotionBlock } from "@/lib/notion-types";
 
 export const revalidate = 300;
@@ -20,6 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug: slugSegments } = await params;
   const slug = resolveSlug(slugSegments);
 
+  // Try Notion Pages DB first
   const result = await getPageBySlug(slug);
   if (result) {
     return {
@@ -31,11 +32,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const fallback = fallbackPages.find((p) => p.slug === slug);
-  if (fallback) {
+  // Fall back to route map
+  const entry = getRouteEntry(slug);
+  if (entry) {
     return {
-      title: fallback.title,
-      description: fallback.description,
+      title: entry.title,
+      description: entry.description,
     };
   }
 
@@ -43,6 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
+  // Prefer Notion pages if available, otherwise use the route map
   const pages = await getPages();
 
   if (pages.length > 0) {
@@ -51,8 +54,8 @@ export async function generateStaticParams() {
     }));
   }
 
-  return fallbackPages.map((page) => ({
-    slug: page.slug === "" ? [] : page.slug.split("/"),
+  return getAllSlugs().map((s) => ({
+    slug: s === "" ? [] : s.split("/"),
   }));
 }
 
@@ -60,7 +63,7 @@ export default async function CatchAllPage({ params }: Props) {
   const { slug: slugSegments } = await params;
   const slug = resolveSlug(slugSegments);
 
-  // Try Notion first
+  // Try Notion Pages DB first
   const result = await getPageBySlug(slug);
   if (result) {
     const Template = templates[result.page.template];
@@ -68,22 +71,22 @@ export default async function CatchAllPage({ params }: Props) {
     return <Template page={result.page} blocks={result.blocks} />;
   }
 
-  // Fallback to hardcoded pages
-  const fallback = fallbackPages.find((p) => p.slug === slug);
-  if (!fallback) notFound();
+  // Fall back to route map
+  const entry = getRouteEntry(slug);
+  if (!entry) notFound();
 
-  const Template = templates[fallback.template];
+  const Template = templates[entry.template];
   if (!Template) notFound();
 
   const fallbackPage: NotionPage = {
-    id: fallback.slug || "home",
-    slug: fallback.slug,
-    title: fallback.title,
-    description: fallback.description,
-    template: fallback.template,
-    heroTitle: fallback.heroTitle,
-    heroBadge: fallback.heroBadge,
-    heroDescription: fallback.heroDescription,
+    id: entry.slug || "home",
+    slug: entry.slug,
+    title: entry.title,
+    description: entry.description,
+    template: entry.template,
+    heroTitle: entry.heroTitle,
+    heroBadge: entry.heroBadge,
+    heroDescription: entry.heroDescription,
     ogImage: "",
     status: "Published",
     order: 0,
