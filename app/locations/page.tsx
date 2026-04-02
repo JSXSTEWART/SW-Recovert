@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin, Phone } from "lucide-react";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Locations",
@@ -12,18 +13,18 @@ export const metadata: Metadata = {
 const locations = [
   {
     city: "Addison, TX (Corporate Office)",
-    address: "16200 Addison Road, Suite 260\nAddison, TX 75001",
-    phone: "1-866-551-4684",
+    address: siteConfig.headquarters.replace(", ", "\n").replace(", ", "\n"),
+    phone: siteConfig.phone,
   },
   {
     city: "Phoenix, AZ (Operations)",
     address: "Regional Operations Center\nPhoenix Metro Area",
-    phone: "1-866-551-4684",
+    phone: siteConfig.phone,
   },
   {
     city: "Houston, TX (Operations)",
     address: "Regional Operations Center\nHouston Metro Area",
-    phone: "1-866-551-4684",
+    phone: siteConfig.phone,
   },
 ];
 
@@ -45,7 +46,7 @@ export default function LocationsPage() {
               <CardHeader><CardTitle className="text-[#0f1c2e]">{location.city}</CardTitle></CardHeader>
               <CardContent className="space-y-3 text-sm text-[#475569]">
                 <p className="flex gap-2 whitespace-pre-line"><MapPin className="h-4 w-4 mt-0.5 text-[#1e3a5f]" />{location.address}</p>
-                <a href="tel:+18665514684" className="flex gap-2 hover:text-[#1e3a5f] transition-colors"><Phone className="h-4 w-4 mt-0.5 text-[#1e3a5f]" />{location.phone}</a>
+                <a href={`tel:${location.phone.replace(/[^\d+]/g, "")}`} className="flex gap-2 hover:text-[#1e3a5f] transition-colors"><Phone className="h-4 w-4 mt-0.5 text-[#1e3a5f]" />{location.phone}</a>
               </CardContent>
             </Card>
           ))}

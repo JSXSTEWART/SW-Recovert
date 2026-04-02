@@ -23,6 +23,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Financial BPO & Receivables Management Services",
@@ -437,13 +438,13 @@ export default function HomePage() {
                 <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
               </Button>
             </Link>
-            <a href="tel:+18005551234">
+            <a href={`tel:${siteConfig.phone.replace(/[^\d+]/g, "")}`}>
               <Button
                 size="lg"
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-[#1e3a5f]"
               >
-                Call 1-866-551-4684
+                Call {siteConfig.phone}
               </Button>
             </a>
           </div>

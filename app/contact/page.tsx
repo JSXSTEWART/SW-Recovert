@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { ContactForm } from "@/components/contact/contact-form";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -13,19 +14,19 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "1-866-551-4684",
-    href: "tel:+18665514684",
+    value: siteConfig.phone,
+    href: `tel:${siteConfig.phone.replace(/[^\d+]/g, "")}`,
   },
   {
     icon: Mail,
     label: "Email",
-    value: "info@swrecovery.com",
-    href: "mailto:info@swrecovery.com",
+    value: siteConfig.email,
+    href: `mailto:${siteConfig.email}`,
   },
   {
     icon: MapPin,
     label: "Address",
-    value: "16200 Addison Road, Suite 260\nAddison, TX 75001",
+    value: siteConfig.headquarters.replace(", ", "\n").replace(", ", "\n"),
     href: "https://maps.google.com",
   },
   {
