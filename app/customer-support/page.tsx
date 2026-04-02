@@ -13,11 +13,11 @@ export const metadata: Metadata = {
 export default function CustomerSupportPage() {
   return (
     <>
-      <section className="bg-[#1e3a5f] text-white py-16 lg:py-20" aria-labelledby="support-heading">
+      <section className="bg-gradient-to-r from-[#1e3a5f] to-[#2c557e] text-white py-16 lg:py-20" aria-labelledby="support-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Badge variant="accent" className="mb-4">Customer Support</Badge>
+          <Badge variant="accent" className="mb-4 border-none bg-[#c8962c]/20 text-[#f6d99d]">Customer Support</Badge>
           <h1 id="support-heading" className="text-4xl sm:text-5xl font-bold mb-5 max-w-2xl">Need Help With Your Account?</h1>
-          <p className="text-blue-200 text-lg max-w-2xl leading-relaxed">Our customer service team can assist with account questions, payment options, dispute handling, and communication preferences.</p>
+          <p className="text-blue-200 text-lg max-w-2xl leading-relaxed">Our support team can help with account status, payment arrangements, communication preferences, and dispute guidance.</p>
         </div>
       </section>
 
@@ -32,6 +32,12 @@ export default function CustomerSupportPage() {
             <h2 className="text-xl font-semibold text-[#0f1c2e] mb-2">Make a Payment by Phone</h2>
             <p className="text-[#64748b] mb-4">Automated and agent-assisted payment options are available.</p>
             <a href={`tel:${siteConfig.paymentPhone.replace(/[^\d+]/g, "")}`} className="text-[#1e3a5f] font-semibold">{siteConfig.paymentPhone}</a>
+          </div>
+        </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
+          <div className="rounded-2xl border border-[#e2e8f0] p-6">
+            <h2 className="text-xl font-semibold text-[#0f1c2e] mb-2">Response Times</h2>
+            <p className="text-[#64748b]">General inquiries are typically answered within 1 business day. Written disputes are reviewed according to regulatory timelines.</p>
           </div>
         </div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
