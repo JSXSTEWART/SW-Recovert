@@ -9,7 +9,7 @@ import { NewsletterForm } from "@/components/resources/newsletter-form";
 export const metadata: Metadata = {
   title: "Resources & Blog",
   description:
-    "Explore Meridian Recovery Solutions' library of guides, case studies, articles, and compliance updates to stay current on debt recovery best practices.",
+    "Explore Southwest Recovery Services' library of guides, case studies, articles, and compliance updates to stay current on debt recovery best practices.",
 };
 
 const featured = {
@@ -27,7 +27,7 @@ const articles = [
     badge: "Case Study",
     title: "Healthcare System Reduces Bad Debt by 38% in 12 Months",
     excerpt:
-      "How Meridian's tailored RCM approach helped a regional 3-hospital network recover $4.2M in outstanding patient balances while maintaining patient satisfaction scores.",
+      "How Southwest Recovery Services' tailored RCM approach helped a regional 3-hospital network recover $4.2M in outstanding patient balances while maintaining patient satisfaction scores.",
     readTime: "6 min read",
     href: "#",
   },
@@ -67,7 +67,7 @@ const articles = [
     badge: "Case Study",
     title: "Municipal Government Recovers $1.8M in Delinquent Fees",
     excerpt:
-      "How a mid-sized city partnered with Meridian to recover two years of unpaid parking fines and utility assessments while maintaining public trust.",
+      "How a mid-sized city partnered with Southwest Recovery Services to recover two years of unpaid parking fines and utility assessments while maintaining public trust.",
     readTime: "5 min read",
     href: "#",
   },
@@ -251,7 +251,7 @@ export default function ResourcesPage() {
             Stay Ahead of Compliance Changes
           </h2>
           <p className="text-blue-200 mb-7 max-w-xl mx-auto">
-            Subscribe to the Meridian newsletter for monthly compliance alerts,
+            Subscribe to the Southwest Recovery Services newsletter for monthly compliance alerts,
             industry insights, and best-practice guides.
           </p>
           <NewsletterForm />

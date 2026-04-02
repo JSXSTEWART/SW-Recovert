@@ -15,7 +15,7 @@ import { Card, CardContent } from "@/components/ui/card";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Meridian Recovery Solutions - 25+ years of trusted debt recovery, compliance expertise, and client-first service across commercial, healthcare, government, and more.",
+    "Learn about Southwest Recovery Services - 25+ years of trusted debt recovery, compliance expertise, and client-first service across commercial, healthcare, government, and more.",
 };
 
 const values = [
@@ -95,7 +95,7 @@ export default function AboutPage() {
             25 Years of Trusted Recovery Expertise
           </h1>
           <p className="text-blue-200 text-lg max-w-2xl leading-relaxed">
-            Founded in 1999, Meridian Recovery Solutions has grown into one of
+            Founded in 1999, Southwest Recovery Services has grown into one of
             the most trusted names in debt recovery and accounts receivable
             management - built on a foundation of compliance, transparency, and
             measurable results.
@@ -113,7 +113,7 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-[#64748b] leading-relaxed">
                 <p>
-                  At Meridian, we believe effective debt recovery doesn&apos;t require
+                  At Southwest Recovery Services, we believe effective debt recovery doesn&apos;t require
                   aggressive tactics - it requires expertise, technology, and a
                   genuine commitment to doing the right thing for both our clients
                   and the consumers we contact.
@@ -229,7 +229,7 @@ export default function AboutPage() {
             Ready to Work With Us?
           </h2>
           <p className="text-blue-200 mb-7 max-w-xl mx-auto">
-            Contact our team to discuss how Meridian can be customized to your
+            Contact our team to discuss how Southwest Recovery Services can be customized to your
             organization&apos;s recovery goals.
           </p>
           <Link href="/contact">

@@ -1,8 +1,11 @@
 export const siteConfig = {
-  name: "Apex Receivables Group",
+  name: "Southwest Recovery Services",
   description:
-    "Enterprise debt recovery, accounts receivable management, and revenue cycle solutions for regulated industries.",
-  url: "https://example.com",
-  email: "hello@apexreceivables.com",
-  phone: "+1 (800) 555-0148",
+    "Southwest Recovery Services is a nationally recognized leader in financial business process outsourcing and receivables management.",
+  url: "https://www.swrecovery.com",
+  email: "info@swrecovery.com",
+  phone: "+1 (866) 551-4684",
+  customerServicePhone: "+1 (866) 837-3065",
+  paymentPhone: "+1 (866) 558-3328",
+  headquarters: "16200 Addison Road, Suite 260, Addison, TX 75001",
 };

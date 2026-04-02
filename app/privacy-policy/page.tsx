@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Meridian Recovery Solutions Privacy Policy — how we collect, use, and protect your personal information.",
+    "Southwest Recovery Services Privacy Policy — how we collect, use, and protect your personal information.",
 };
 
 const sections = [
@@ -37,7 +37,7 @@ We will not sell your personal information to third parties. We may share inform
   {
     id: "data-security",
     title: "3. Data Security",
-    content: `Meridian Recovery Solutions maintains administrative, technical, and physical safeguards designed to protect the information we collect. We are SOC 2 Type II certified and maintain security practices consistent with applicable legal requirements, including those under GLBA and HIPAA where applicable.
+    content: `Southwest Recovery Services maintains administrative, technical, and physical safeguards designed to protect the information we collect. We are SOC 2 Type II certified and maintain security practices consistent with applicable legal requirements, including those under GLBA and HIPAA where applicable.
 
 Despite our safeguards, no data transmission or storage system can be guaranteed 100% secure. If you believe your information has been compromised, please contact us immediately.`,
   },
@@ -58,7 +58,7 @@ We use Google Analytics to understand how visitors interact with our website. Go
 • The right to opt out of marketing communications
 • The right to data portability
 
-To exercise any of these rights, please contact us at privacy@meridianrecovery.com. California residents may have additional rights under the California Consumer Privacy Act (CCPA).`,
+To exercise any of these rights, please contact us at privacy@swrecovery.com. California residents may have additional rights under the California Consumer Privacy Act (CCPA).`,
   },
   {
     id: "third-party-links",
@@ -68,7 +68,7 @@ To exercise any of these rights, please contact us at privacy@meridianrecovery.c
   {
     id: "compliance",
     title: "7. Regulatory Compliance",
-    content: `As a debt recovery company, Meridian Recovery Solutions operates under numerous regulatory frameworks including:
+    content: `As a debt recovery company, Southwest Recovery Services operates under numerous regulatory frameworks including:
 
 • Fair Debt Collection Practices Act (FDCPA)
 • Health Insurance Portability and Accountability Act (HIPAA)
@@ -88,13 +88,13 @@ Our privacy practices are designed to meet or exceed the requirements of these r
     title: "9. Contact Us",
     content: `If you have questions or concerns about this Privacy Policy or our data practices, please contact us:
 
-Meridian Recovery Solutions
+Southwest Recovery Services
 Attn: Privacy Officer
-123 Financial Plaza, Suite 400
-New York, NY 10001
+16200 Addison Road, Suite 260
+Addison, TX 75001
 
-Email: privacy@meridianrecovery.com
-Phone: 1-800-555-1234`,
+Email: privacy@swrecovery.com
+Phone: 1-866-551-4684`,
   },
 ];
 
@@ -127,7 +127,7 @@ export default function PrivacyPolicyPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-slate max-w-none">
             <p className="text-lg text-[#64748b] leading-relaxed mb-10">
-              Meridian Recovery Solutions, Inc. (&ldquo;Meridian,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) is
+              Southwest Recovery Services, Inc. (&ldquo;Southwest Recovery Services,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) is
               committed to protecting the privacy and security of the information
               you share with us. This Privacy Policy explains how we collect, use,
               disclose, and safeguard your information when you visit our website

@@ -4,7 +4,7 @@ import { Container } from "@/components/ui/container";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Privacy policy for Apex Receivables Group website and contact forms.",
+  description: "Privacy policy for Southwest Recovery Services website and contact forms.",
 };
 
 export default function PrivacyPage() {

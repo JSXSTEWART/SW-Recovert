@@ -1,4 +1,4 @@
-# Meridian Recovery Solutions — Next.js Website
+# Southwest Recovery Services — Next.js Website
 
 A production-ready Next.js website for a debt recovery and accounts receivable management company. Built with TypeScript, App Router, Tailwind CSS v4, and custom UI components inspired by shadcn/ui.
 
@@ -101,7 +101,7 @@ All simulated content references FDCPA, HIPAA, GLBA, and CFPB compliance. Replac
 ## License
 
 # MIT
-# Apex Receivables Group Website
+# Southwest Recovery Services Website
 
 Production-ready marketing website starter for a debt recovery and accounts receivable management company, built with Next.js App Router, TypeScript, Tailwind CSS, and shadcn-inspired reusable UI primitives.
 
